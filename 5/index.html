@@ -5,13 +5,60 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Image Hover Effects</title>
-    <link rel="stylesheet" href="style.css" />
+    <style>
+      * {
+        margin: 0px;
+        padding: 0px;
+        box-sizing: border-box;
+      }
+      body {
+        background-color: royalblue;
+      }
+      .imgBox {
+        width: 300px;
+        height: 300px;
+        position: absolute;
+        top: 50%;
+        left: 50%;
+        background-color: #000;
+        border-radius: 10px;
+        box-shadow: 0 20px 25px rgba(0, 0, 0, 0.5);
+        transform: translate(-50%, -50%);
+        background-color: white;
+        overflow: hidden;
+      }
+      .imgBox img {
+        width: 100%;
+        height: 100%;
+        transition: 0.5s;
+      }
+      .imgBox .content {
+        width: 100%;
+        height: 100%;
+        position: absolute;
+        bottom: -100%;
+        background-color: #7986cb;
+        padding: 15px 10px;
+        font-family: arial;
+        font-size: 14px;
+        transition: 0.5s;
+      }
+      .imgBox .content p {
+        margin: 0;
+        padding: 0;
+        color: #fff;
+      }
+      .imgBox:hover .content {
+        bottom: -65%;
+      }
+      .imgBox:hover img {
+        transform: translateY(-35%);
+      }
+    </style>
   </head>
   <body>
-    <div class="container">
       <div class="imgBox">
         <img src="/3/1.jpeg" alt="" />
-      </div>
       <div class="content">
         <p>
           Lorem ipsum dolor sit amet consectetur adipisicing elit. Molestiae
