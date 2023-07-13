@@ -11,51 +11,32 @@
         padding: 0;
         box-sizing: border-box;
       }
-      .main {
-        width: 400px;
-        height: 300px;
+      #father {
+        background-color: red;
+        position: relative;
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+      }
+
+      #son1 {
         position: absolute;
-        top: 50%;
-        left: 50%;
-        transform: translate(-50%, -50%);
-        overflow: hidden;
+        top: 100px;
+        background-color: yellow;
       }
-      .img {
-        width: 100%;
-        height: 100%;
+
+      #son2 {
         position: absolute;
-        top: 0;
-        overflow: hidden;
-        transition: 1s;
-      }
-      img {
-        width: 100%;
-        height: 100%;
-        object-fit: cover;
-      }
-      .content {
-        width: 100%;
-        height: 100%;
-        background-color: orangered;
-      }
-      .main:hover .img {
-        transform: translateX(100%);
+        top: 200px;
+        background-color: blue;
       }
     </style>
   </head>
   <body>
-    <h1>Practice</h1>
-    <div class="main">
-      <div class="img">
-        <img src="../4/1.jpeg" alt="" />
-      </div>
-      <div class="content">
-        <h3>content</h3>
-        <p>
-          Lorem ipsum dolor, sit amet consectetur adipisicing elit. Placeat,
-          ipsum.
-        </p>
-      </div>
+    <div id="father">
+      <div id="son1">Son1</div>
+      <div id="son2">Son2</div>
     </div>
   </body>
 </html>
